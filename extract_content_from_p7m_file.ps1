@@ -15,7 +15,7 @@ The folder where the extracted content will be saved.
 .\extract_content_from_p7m_file.ps1 -folder_p7m "C:\P7M_Files" -folder_extract "C:\Extracted_Content"
 
 .AUTHOR
-Marco Zorzi
+Marco Zorzi (github.mz@gmail.com)
 
 .DATE
 2022-Q4
