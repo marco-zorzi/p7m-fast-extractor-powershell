@@ -30,8 +30,8 @@ function extract_content_from_p7m_file($folder_p7m, $folder_extract)
     Add-Type -AssemblyName System.IO
     Add-Type -AssemblyName System.Security
     
-    # Get a list of files in the '$folder_p7m' directory
-    $files = Get-ChildItem $folder_p7m
+    # Get a list of P7M files in the '$folder_p7m' directory
+    $files = Get-ChildItem $folder_p7m -Filter "*.p7m"
     
     # Initialize a counter variable to keep track of progress
     $i = 0
