@@ -19,18 +19,29 @@ To use this script, you need to follow these steps:
 2. Open PowerShell and navigate to the directory where the script is located.
 3. Run the script by calling the extract_content_from_p7m_file function with the appropriate parameters.
 
+### Script Parameters
+| Parameter         | Type   | Description                                      |
+|-------------------|--------|--------------------------------------------------|
+| `SourceFolder`    | String | Path to the folder containing `.p7m` files       |
+| `DestinationFolder`| String| Path to the folder where extracted files are saved |
+
 ### Usage
-To use the extract_content_from_p7m_file function, you need to provide two parameters:
-* `$folder_p7m`: the directory where the P7M files are located.
-* `$folder_extract`: the directory where the extracted files should be saved.
+Invoke the refactored cmdlet positionally:
+
+```powershell
+.\extract_content_from_p7m_file.ps1 "C:\P7M_Files" "C:\Extracted_Content"
 ```
-extract_content_from_p7m_file -folder_p7m "C:\path\to\p7m\files" -folder_extract "C:\path\to\extract\folder"
+
+Or call the function directly (e.g. from a module):
+
+```powershell
+Extract-P7MFileContent -SourceFolder "C:\P7M_Files" -DestinationFolder "C:\Extracted_Content" -Verbose
 ```
 
 ### Example
-Suppose you have a directory called `C:\myfiles` that contains three P7M files: `file1.p7m`, `file2.p7m`, and `file3.p7m`. You want to extract the contents of these files and save them to a directory called `C:\extracted_files`. To do this, you would run the following command:
+Suppose `C:\myfiles` contains `file1.p7m`, `file2.p7m`, and `file3.p7m`. To extract them into `C:\extracted_files`, run:
 ```
-extract_content_from_p7m_file -folder_p7m "C:\myfiles" -folder_extract "C:\extracted_files"
+.\extract_content_from_p7m_file.ps1 "C:\myfiles" "C:\extracted_files"
 ```
 
 ## License
