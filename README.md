@@ -26,22 +26,10 @@ To use this script, you need to follow these steps:
 | `DestinationFolder`| String| Path to the folder where extracted files are saved |
 
 ### Usage
-Invoke the refactored cmdlet positionally:
+Invoke the cmdlet positionally:
 
 ```powershell
 .\extract_content_from_p7m_file.ps1 "C:\P7M_Files" "C:\Extracted_Content"
-```
-
-Or call the function directly (e.g. from a module):
-
-```powershell
-Extract-P7MFileContent -SourceFolder "C:\P7M_Files" -DestinationFolder "C:\Extracted_Content" -Verbose
-```
-
-### Example
-Suppose `C:\myfiles` contains `file1.p7m`, `file2.p7m`, and `file3.p7m`. To extract them into `C:\extracted_files`, run:
-```
-.\extract_content_from_p7m_file.ps1 "C:\myfiles" "C:\extracted_files"
 ```
 
 ## License
